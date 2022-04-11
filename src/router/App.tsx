@@ -4,7 +4,6 @@ import ListBookPages from 'pages/ListBook/ListBookPages';
 import NotFoundPages from 'pages/NotFound/NotFoundPages';
 import LoginPages from 'pages/Login/LoginPages';
 import PrivateRoutes from 'helper/PrivateRoutes';
-import DashboardPages from 'pages/Dashboard/DashboardPages';
 
 const App = () => {
   return (
@@ -13,7 +12,6 @@ const App = () => {
         <Routes>
           <Route path="*" element={<NotFoundPages />} />
           <Route path="/auth/login" element={<LoginPages />} />
-          <Route path="/dashboard" element={<DashboardPages />} />
           <Route element={<PrivateRoutes />}>
             <Route path="/" element={<ListBookPages />} />
           </Route>

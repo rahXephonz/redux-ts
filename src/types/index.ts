@@ -18,6 +18,16 @@ export interface UserState {
   };
 }
 
+export interface BookState {
+  loading?: boolean;
+  error?: string;
+  books?: {
+    id?: number;
+    title?: string;
+    createdAt?: string;
+  }[];
+}
+
 export interface Action {
   type: string;
   payload?: string;

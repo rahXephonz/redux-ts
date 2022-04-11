@@ -1,7 +1,8 @@
 import { login } from 'app/actions/userAction';
+import { RootState } from 'app/store';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
-import { FormLoginValues } from 'types';
+import { useDispatch, useSelector } from 'react-redux';
+import { FormLoginValues, UserState } from 'types';
 import { patterns } from 'utils/patterns';
 
 const LoginPages = () => {
@@ -19,7 +20,7 @@ const LoginPages = () => {
     dispatch(login(email, password));
 
     setTimeout(() => {
-      window.location.href = '/dashboard';
+      window.location.href = '/';
     }, 800);
   };
 
