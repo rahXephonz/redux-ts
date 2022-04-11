@@ -10,3 +10,7 @@
   box-sizing: border-box;
   font-family: 'Rubik', sans-serif;
 }
+
+body {
+  background: #f7f5f2;
+}

@@ -1,9 +1,8 @@
-import { login } from 'app/actions/userAction';
-import { RootState } from 'app/store';
 import { useForm } from 'react-hook-form';
-import { useDispatch, useSelector } from 'react-redux';
-import { FormLoginValues, UserState } from 'types';
+import { useDispatch } from 'react-redux';
+import { FormLoginValues } from 'types';
 import { patterns } from 'utils/patterns';
+import { login } from 'app/actions/userAction';
 
 const LoginPages = () => {
   const dispatch = useDispatch();

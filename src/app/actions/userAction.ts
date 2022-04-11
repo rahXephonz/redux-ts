@@ -9,6 +9,7 @@ import { AnyAction } from 'redux';
 import { RootState } from 'app/store';
 import axios from 'lib/axios';
 
+// reference from react redux documentations
 export const login =
   (
     email: string,
@@ -45,7 +46,7 @@ export const login =
   };
 
 export const logout =
-  (): ThunkAction<Promise<void>, RootState, unknown, AnyAction> =>
+  () =>
   async (dispatch: ThunkDispatch<RootState, unknown, AnyAction>): Promise<void> => {
     dispatch({
       type: USER_LOGOUT,

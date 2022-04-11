@@ -25,6 +25,7 @@ const initialState = {
   userLogin: {
     token: getTokenFromStorage,
   },
+  booksData: {},
 } as {};
 
 const persistedReducer = persistReducer(persistConfig, reducers);
