@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './router/App';
 import { Provider } from 'react-redux';
+import store from 'app/store';
 
 // tailwind
 import './styles/index.css';
-import { store } from 'app/store/store';
 
 ReactDOM.render(
   <React.StrictMode>

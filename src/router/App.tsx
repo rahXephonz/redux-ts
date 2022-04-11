@@ -2,18 +2,21 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Layout from 'layout/Layout';
 import ListBookPages from 'pages/ListBook/ListBookPages';
 import NotFoundPages from 'pages/NotFound/NotFoundPages';
-import AddBookPages from 'pages/AddBook/AddBookPages';
-import EditBookPages from 'pages/EditBook/EditBookPages';
+import LoginPages from 'pages/Login/LoginPages';
+import PrivateRoutes from 'helper/PrivateRoutes';
+import DashboardPages from 'pages/Dashboard/DashboardPages';
 
 const App = () => {
   return (
     <Router>
       <Layout>
         <Routes>
-          <Route path='/' element={<ListBookPages />} />
-          <Route path='/add/post' element={<AddBookPages />} />
-          <Route path='/edit/post/:id' element={<EditBookPages />} />
-          <Route path='*' element={<NotFoundPages />} />
+          <Route path="*" element={<NotFoundPages />} />
+          <Route path="/auth/login" element={<LoginPages />} />
+          <Route path="/dashboard" element={<DashboardPages />} />
+          <Route element={<PrivateRoutes />}>
+            <Route path="/" element={<ListBookPages />} />
+          </Route>
         </Routes>
       </Layout>
     </Router>

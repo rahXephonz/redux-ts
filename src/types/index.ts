@@ -1,22 +1,24 @@
-export interface FormValues {
-  title: string;
-  body: string;
-  userId: number;
+export interface FormLoginValues {
+  email: string;
+  password: string;
 }
 
-export type QueryPageParams = {
-  id: string;
-  name: string;
-};
-
-export type Books = {
+export type Todo = {
+  userId: number;
   id: number;
   title: string;
-  createdAt: string;
+  completed: boolean;
 };
 
-export interface BooksProps {
-  id: number;
-  title: string;
-  createdAt: string;
+export interface UserState {
+  loading?: boolean;
+  error?: string;
+  userInfo?: {
+    token?: string;
+  };
+}
+
+export interface Action {
+  type: string;
+  payload?: string;
 }
