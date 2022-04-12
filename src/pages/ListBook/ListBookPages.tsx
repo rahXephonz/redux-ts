@@ -5,8 +5,8 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { BookState, FormBookValues } from 'types';
 import { useForm } from 'react-hook-form';
-import swal from 'sweetalert';
 import { getDate } from 'utils/getDate';
+import swal from 'sweetalert';
 
 const ListBookPages = () => {
   const dispatch = useDispatch();
@@ -25,7 +25,7 @@ const ListBookPages = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const handleDelete = (id: number | any) => {
+  const handleDelete = (id: number) => {
     swal({
       title: 'Are you sure?',
       text: '❌ Remember, this action cannot be reversed!',
@@ -90,7 +90,7 @@ const ListBookPages = () => {
 
                   <button
                     className="flex-no-shrink p-2 ml-2 border-2 rounded border-red-400 text-red-400 mt-6"
-                    onClick={() => handleDelete(id)}
+                    onClick={() => handleDelete(Number(id))}
                   >
                     Remove
                   </button>

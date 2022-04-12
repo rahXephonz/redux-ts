@@ -17,14 +17,8 @@ const persistConfig = {
   storage,
 };
 
-const getTokenFromStorage = localStorage.getItem('jwt')
-  ? JSON.parse(localStorage.getItem('jwt')!)
-  : undefined;
-
 const initialState = {
-  userLogin: {
-    token: getTokenFromStorage,
-  },
+  userLogin: {},
   booksData: {},
 } as {};
 

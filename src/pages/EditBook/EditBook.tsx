@@ -21,14 +21,14 @@ const EditBookPages = () => {
   } = useForm<FormBookValues>();
 
   useEffect(() => {
-    dispatch(getBookById(bookId as any));
+    dispatch(getBookById(Number(bookId)));
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const onSubmitForm = async (values: FormBookValues) => {
     const { title } = values;
 
-    dispatch(editBook(title, bookId as any));
+    dispatch(editBook(title, Number(bookId)));
   };
 
   const { book } = bookData;
