@@ -3,13 +3,6 @@ export interface FormLoginValues {
   password: string;
 }
 
-export type Todo = {
-  userId: number;
-  id: number;
-  title: string;
-  completed: boolean;
-};
-
 export type QueryPageParams = {
   bookId: string;
   name: string;
