@@ -1,1 +1,1 @@
-# Implementing Redux Saga with React.
+# Implementing Redux with React.
