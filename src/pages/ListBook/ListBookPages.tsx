@@ -95,7 +95,7 @@ const ListBookPages = () => {
                     Remove
                   </button>
                 </div>
-                <p className="-mt-6">on {getDate(createdAt)}</p>
+                <p className="-mt-6 text-[13px]">on {getDate(createdAt)}</p>
               </div>
             ))}
         </div>
